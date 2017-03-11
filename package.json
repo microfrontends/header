@@ -7,12 +7,15 @@
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.0",
     "react-scripts": "0.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "transpile": "NODE_ENV=production babel src --out-dir transpiled --presets react-app",
+    "start:prod": "NODE_ENV=production node server.js"
   }
 }
