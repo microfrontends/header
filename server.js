@@ -20,6 +20,7 @@ server.get('/', (req, res) => {
 
 server.use(express.static('build'));
 
-server.listen(8080, () => {
-  console.log('App listening on http://localhost:8080');
+const port = process.env.PORT || 8080;
+server.listen(port, () => {
+  console.log(`App listening on port ${port}`);
 });
